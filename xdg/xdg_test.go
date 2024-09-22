@@ -9,6 +9,10 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
+func init() {
+	os.Clearenv() // clear all env vars in case it affects the tests
+}
+
 func TestNewXDG(t *testing.T) {
 	currentUser, err := user.Current()
 

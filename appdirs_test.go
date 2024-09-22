@@ -1,6 +1,7 @@
 package appdirs
 
 import (
+	"os"
 	"testing"
 
 	"github.com/ggicci/appdirs/internal"
@@ -9,6 +10,10 @@ import (
 )
 
 const TestAppName = "testapp"
+
+func init() {
+	os.Clearenv() // clear all env vars in case it affects the tests
+}
 
 func TestNewWithSpec(t *testing.T) {
 	app := createTestApp(t)
@@ -76,6 +81,7 @@ func TestRuntimeFile(t *testing.T) {
 func createTestApp(t *testing.T) *AppDirs {
 	user := internal.FakeUser("ggicci")
 	spec, err := xdg.NewXDGWithUser(user)
+
 	assert.NoError(t, err)
 	assert.NotNil(t, spec)
 
