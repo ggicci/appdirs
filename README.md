@@ -2,6 +2,11 @@
 
 A utility to locate the base directories, as well as the config, data, cache files an app needs.
 
+[![Go](https://github.com/ggicci/appdirs/actions/workflows/go.yaml/badge.svg)](https://github.com/ggicci/appdirs/actions/workflows/go.yaml)
+[![codecov](https://codecov.io/gh/ggicci/appdirs/graph/badge.svg?token=YU7FGGOY60)](https://codecov.io/gh/ggicci/appdirs)
+[![Go Report Card](https://goreportcard.com/badge/github.com/ggicci/appdirs)](https://goreportcard.com/report/github.com/ggicci/appdirs)
+[![Go Reference](https://pkg.go.dev/badge/github.com/ggicci/appdirs.svg)](https://pkg.go.dev/github.com/ggicci/appdirs)
+
 ```go
 import "github.com/ggicci/appdirs"
 
@@ -36,4 +41,4 @@ The `appdirs` package provides a set of functions to locate the files an app nee
 | `dirs.CacheFile(FILENAME)`   | `dirs.CacheHome()/FILENAME`  |
 | `dirs.RuntimeFile(FILENAME)` | `dirs.RuntimeDir()/FILENAME` |
 
-More functions are available in the [godoc](https://pkg.go.dev/github.com/ggicci/basedirs).
+More functions are available in the [godoc](https://pkg.go.dev/github.com/ggicci/appdirs).
